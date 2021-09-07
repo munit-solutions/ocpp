@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/main.ts",
+  "homepage": "https://github.com/munit-solutions/ocpp.git",
   "scripts": {
     "cli": "ts-node src/cli.ts",
     "test": "jest",
@@ -32,5 +33,14 @@
   },
   "dependencies": {
     "ws": "^7.5.4"
-  }
+  },
+  "bugs": {
+    "email": "victorien.fotsing@munit-solutions.com"
+  },
+  "keywords": [
+    "OCPP",
+    "Charging Point",
+    "Loadmanagement",
+    "Munit"
+  ]
 }
