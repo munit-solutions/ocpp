@@ -23,9 +23,25 @@ import GetCompositeSchedule from './builder/clientToServer/GetCompositeSchedule'
 import GetCompositeScheduleResult from './builder/serverToClient/GetCompositeSchedule';
 import GetDiagnostics from './builder/clientToServer/GetDiagnostics';
 import GetDiagnosticsResult from './builder/serverToClient/GetDiagnostics';
+import ClientCommand from './enum/ClientCommand';
+import AvailabilityStatus from './enum/AvailabilityStatus';
+import AvailabilityType from './enum/AvailabilityType';
+import CancelReservationStatus from './enum/CancelReservationStatus';
+import ChargingProfilePurposeType from './enum/ChargingProfilePurposeType';
+import ChargingRateUnitType from './enum/ChargingRateUnitType';
+import ClearCacheStatus from './enum/ClearCacheStatus';
+import ClearChargingProfileStatus from './enum/ClearChargingProfileStatus';
+import ConfigurationStatus from './enum/ConfigurationStatus';
+import DataTransferStatus from './enum/DataTransferStatus';
+import DiagnosticsStatus from './enum/DiagnosticsStatus';
+import ErrorCode from './enum/ErrorCode';
+import FirmwareStatus from './enum/FirmwareStatus';
+import GetCompositeScheduleStatus from './enum/GetCompositeScheduleStatus';
+import RegistrationStatus from './enum/RegistrationStatus';
 
 export {
   OCPPServer,
+  // command list
   Authorize,
   AuthorizeResult,
   BootNotification,
@@ -50,4 +66,20 @@ export {
   GetCompositeScheduleResult,
   GetDiagnostics,
   GetDiagnosticsResult,
+  // enum
+  ClientCommand,
+  AvailabilityStatus,
+  AvailabilityType,
+  CancelReservationStatus,
+  ChargingProfilePurposeType,
+  ChargingRateUnitType,
+  ClearCacheStatus,
+  ClearChargingProfileStatus,
+  ConfigurationStatus,
+  DataTransferStatus,
+  DiagnosticsStatus,
+  ErrorCode,
+  FirmwareStatus,
+  GetCompositeScheduleStatus,
+  RegistrationStatus
 };

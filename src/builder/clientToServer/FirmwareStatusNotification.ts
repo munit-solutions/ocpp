@@ -1,6 +1,6 @@
 import FirmwareStatus from '../../enum/FirmwareStatus';
 import Call from '../Call';
-import ActionEnum from '../../enum/ActionEnum';
+import ClientCommand from '../../enum/ClientCommand';
 
 export type FirmwareStatusNotificationPayload = {
   status: FirmwareStatus;
@@ -9,6 +9,6 @@ export type FirmwareStatusNotificationPayload = {
 export default class FirmwareStatusNotification extends Call {
   constructor(public payload?: FirmwareStatusNotificationPayload) {
     super();
-    this.action = ActionEnum.FirmwareStatusNotification;
+    this.action = ClientCommand.FirmwareStatusNotification;
   }
 }

@@ -1,6 +1,6 @@
 import DataTransferStatus from '../../enum/DataTransferStatus';
 import Call from '../Call';
-import ActionEnum from '../../enum/ActionEnum';
+import ClientCommand from '../../enum/ClientCommand';
 
 export type DataTransferPayload = {
   status: DataTransferStatus;
@@ -10,6 +10,6 @@ export type DataTransferPayload = {
 export default class DataTransfer extends Call {
   constructor(public payload?: DataTransferPayload) {
     super();
-    this.action = ActionEnum.DataTransfer;
+    this.action = ClientCommand.DataTransfer;
   }
 }

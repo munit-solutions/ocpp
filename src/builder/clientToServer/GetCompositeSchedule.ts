@@ -1,6 +1,6 @@
 import ChargingRateUnitType from '../../enum/ChargingRateUnitType';
 import Call from '../Call';
-import ActionEnum from '../../enum/ActionEnum';
+import ClientCommand from '../../enum/ClientCommand';
 
 export type GetCompositeScheduleResPayload = {
   connectorId: number;
@@ -11,6 +11,6 @@ export type GetCompositeScheduleResPayload = {
 export default class GetCompositeSchedule extends Call {
   constructor(public payload?: GetCompositeScheduleResPayload) {
     super();
-    this.action = ActionEnum.GetCompositeSchedule;
+    this.action = ClientCommand.GetCompositeSchedule;
   }
 }

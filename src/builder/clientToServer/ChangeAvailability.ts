@@ -1,6 +1,6 @@
 import AvailabilityType from '../../enum/AvailabilityType';
 import Call from '../Call';
-import ActionEnum from '../../enum/ActionEnum';
+import ClientCommand from '../../enum/ClientCommand';
 
 export type ChangeAvailabilityPayload = {
   connectorId: number;
@@ -9,6 +9,6 @@ export type ChangeAvailabilityPayload = {
 export default class ChangeAvailability extends Call {
   constructor(public payload?: ChangeAvailabilityPayload) {
     super();
-    this.action = ActionEnum.ChangeAvailability;
+    this.action = ClientCommand.ChangeAvailability;
   }
 }

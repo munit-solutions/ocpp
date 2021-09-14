@@ -1,20 +1,29 @@
 {
   "name": "@munit-solutions/ocpp",
-  "version": "1.0.0",
+  "version": "1.1.5",
   "description": "",
-  "main": "src/main.ts",
+  "main": "dist/tsc/main.js",
+  "types": "dist/tsc/main.d.ts",
   "homepage": "https://github.com/munit-solutions/ocpp.git",
   "scripts": {
     "cli": "ts-node src/cli.ts",
     "test": "jest",
-    "build": "tsc -p tsconfig.json",
+    "prepublish": "tsc -p tsconfig.json",
     "clean": "rm -rf dist build",
     "watch-and-run": "ts-node-dev --respawn -- src/main.ts",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json"
   },
-  "author": "Victorien Fotsing",
-  "license": "ISC",
+  "author": {
+    "name": "Victorien Fotsing",
+    "email": "victorien.fotsing@munit-solutions.com"
+  },
+  "licenses": [
+    {
+      "type": "GPL-3.0",
+      "url": "https://opensource.org/licenses/GPL-3.0"
+    }
+  ],
   "devDependencies": {
     "@types/jest": "^27.0.1",
     "@types/node": "^16.7.6",
@@ -32,10 +41,12 @@
     "typescript": "^4.4.2"
   },
   "dependencies": {
+    "tslib": "^1.14.1",
     "ws": "^7.5.4"
   },
   "bugs": {
-    "email": "victorien.fotsing@munit-solutions.com"
+    "email": "victorien.fotsing@munit-solutions.com",
+    "url": "https://github.com/munit-solutions/ocpp/issues"
   },
   "keywords": [
     "OCPP",

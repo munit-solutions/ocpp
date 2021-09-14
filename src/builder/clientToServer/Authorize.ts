@@ -1,5 +1,5 @@
 import Call from '../Call';
-import ActionEnum from '../../enum/ActionEnum';
+import ClientCommand from '../../enum/ClientCommand';
 
 export type AuthorizePayload = {
   idTag: string;
@@ -7,6 +7,6 @@ export type AuthorizePayload = {
 export default class Authorize extends Call {
   constructor(public payload?: AuthorizePayload) {
     super();
-    this.action = ActionEnum.BootNotification;
+    this.action = ClientCommand.BootNotification;
   }
 }

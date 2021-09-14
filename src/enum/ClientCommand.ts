@@ -1,4 +1,4 @@
-enum ActionEnum {
+enum ClientCommand {
   Authorize = 'Authorize',
   BootNotification = 'BootNotification',
   ChangeAvailability = 'ChangeAvailability',
@@ -29,4 +29,4 @@ enum ActionEnum {
   TriggerMessage = 'TriggerMessage',
 }
 
-export default ActionEnum;
+export default ClientCommand;

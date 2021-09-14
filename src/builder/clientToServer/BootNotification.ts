@@ -1,5 +1,5 @@
 import Call from '../Call';
-import ActionEnum from '../../enum/ActionEnum';
+import ClientCommand from '../../enum/ClientCommand';
 
 export type BootNotificationPayload = {
   chargeBoxSerialNumber?: string;
@@ -15,6 +15,6 @@ export type BootNotificationPayload = {
 export default class BootNotification extends Call {
   constructor(public payload?: BootNotificationPayload) {
     super();
-    this.action = ActionEnum.BootNotification;
+    this.action = ClientCommand.BootNotification;
   }
 }

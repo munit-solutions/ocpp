@@ -1,9 +1,9 @@
 import ErrorCode from '../enum/ErrorCode';
-import ActionEnum from '../enum/ActionEnum';
+import ClientCommand from '../enum/ClientCommand';
 
 export default class CallError extends Error {
   constructor(
-    public messageType: ActionEnum,
+    public messageType: ClientCommand,
     public id: string,
     public errorCode: ErrorCode,
     public errorDescription: { [key: string]: any },

@@ -1,5 +1,5 @@
 import Call from '../Call';
-import ActionEnum from '../../enum/ActionEnum';
+import ClientCommand from '../../enum/ClientCommand';
 import ChargingProfilePurposeType from '../../enum/ChargingProfilePurposeType';
 
 export type ClearChargingProfilePayload = {
@@ -11,6 +11,6 @@ export type ClearChargingProfilePayload = {
 export default class ClearChargingProfile extends Call {
   constructor(public payload?: ClearChargingProfilePayload) {
     super();
-    this.action = ActionEnum.ClearChargingProfile;
+    this.action = ClientCommand.ClearChargingProfile;
   }
 }

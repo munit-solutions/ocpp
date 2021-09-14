@@ -1,5 +1,5 @@
 import Call from '../Call';
-import ActionEnum from '../../enum/ActionEnum';
+import ClientCommand from '../../enum/ClientCommand';
 
 export type ChangeConfigurationPayload = {
   key: string;
@@ -8,6 +8,6 @@ export type ChangeConfigurationPayload = {
 export default class ChangeConfiguration extends Call {
   constructor(public payload?: ChangeConfigurationPayload) {
     super();
-    this.action = ActionEnum.ChangeConfiguration;
+    this.action = ClientCommand.ChangeConfiguration;
   }
 }

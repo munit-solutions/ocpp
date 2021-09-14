@@ -1,5 +1,5 @@
 import Call from '../Call';
-import ActionEnum from '../../enum/ActionEnum';
+import ClientCommand from '../../enum/ClientCommand';
 
 export type CancelReservationPayload = {
   reservationId: number;
@@ -7,6 +7,6 @@ export type CancelReservationPayload = {
 export default class CancelReservation extends Call {
   constructor(public payload?: CancelReservationPayload) {
     super();
-    this.action = ActionEnum.CancelReservation;
+    this.action = ClientCommand.CancelReservation;
   }
 }
