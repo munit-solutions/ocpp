@@ -1,7 +1,7 @@
 import ChargingProfilePurposeType from '../enum/ChargingProfilePurposeType';
 import ChargingProfileKindType from "../enum/ChargingProfileKindType";
 import RecurrencyKindType from "../enum/RecurrencyKindType";
-import {ChargingSchedule} from "../type/ChargingSchedule";
+import {ChargingSchedule} from "./ChargingSchedule";
 
 export type ChargingProfile = {
   chargingProfileId: number,
