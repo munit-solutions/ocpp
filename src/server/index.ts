@@ -2,6 +2,7 @@ import {Server, ServerOptions} from 'ws';
 import Call from '../builder/Call';
 import ClientCommand from '../enum/ClientCommand';
 import {EventEmitter} from 'events';
+import CallResult from '../builder/CallResult';
 
 
 interface OCPPEvent {
@@ -30,6 +31,11 @@ export default class OCPPServer extends EventEmitter implements OCPPEvent {
           this.emit(msg.action, msg);
         }
       });
+    });
+  }
+  send(data: CallResult) {
+    this.ws.on('open', (ws: WebSocket) => {
+      ws.send(data.toString())
     });
   }
 }
