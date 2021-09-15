@@ -1,4 +1,4 @@
-enum ChargingProfilePurposeType {
+export enum ChargingProfilePurposeType {
   ChargePointMaxProfile = 'ChargePointMaxProfile',
   TxDefaultProfile = 'TxDefaultProfile',
 }

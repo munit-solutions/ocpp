@@ -5,7 +5,7 @@ import ClientCommand from '../../enum/ClientCommand';
 export type GetCompositeScheduleResPayload = {
   connectorId: number;
   duration: number;
-  chargingRateUnit: ChargingRateUnitType;
+  chargingRateUnit?: ChargingRateUnitType;
 };
 
 export default class GetCompositeSchedule extends Call {
