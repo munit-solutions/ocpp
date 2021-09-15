@@ -8,7 +8,7 @@ export type StopTransactionPayload = {
   timestamp: string;
   transactionId:number;
   reason?:Reason
-  transactionData:MeterValue
+  transactionData: MeterValue[]
 };
 
 export default class StopTransaction extends Call {

@@ -1,6 +1,6 @@
-import {IdTagInfo} from "../type/IdTagInfo";
+import {IdTagInfo} from "./IdTagInfo";
 
 export type AuthorizationData = {
-    idTag: string,
-    idTagInfo: IdTagInfo,
+  idTag: string,
+  idTagInfo: IdTagInfo,
 }

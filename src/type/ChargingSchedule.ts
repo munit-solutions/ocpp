@@ -1,5 +1,5 @@
 import ChargingRateUnitType from '../enum/ChargingRateUnitType';
-import {ChargingSchedulePeriod} from '../type/ChargingSchedulePeriod';
+import {ChargingSchedulePeriod} from './ChargingSchedulePeriod';
 
 export type ChargingSchedule = {
     duration: number,
