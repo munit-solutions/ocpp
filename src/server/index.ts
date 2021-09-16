@@ -4,7 +4,7 @@ import ClientCommand from '../enum/ClientCommand';
 import {EventEmitter} from 'events';
 
 export type WSParams = {
-  id: string;
+  id?: string;
 }
 
 export default class OCPPServer extends EventEmitter {
@@ -14,21 +14,17 @@ export default class OCPPServer extends EventEmitter {
     super();
     this.ws = new Server(options, callback);
     this.ws.on('connection', (ws, req) => {
-      if (!req.url || req.url === "/") {
-        this.emit('context_error', {ws});
-      } else {
-        const id = req.url.substring(1);
-        const params: WSParams = {
-          id
-        }
-        ws.on('message', (message) => {
-          const msg = new Call();
-          msg.parseString(message.toString());
-          if (msg.action && Object.values(ClientCommand).includes(msg.action)) {
-            this.emit(msg.action, {ws, params, msg});
-          }
-        });
+      const id = req.url?.substring(1);
+      const params: WSParams = {
+        id
       }
+      ws.on('message', (message) => {
+        const msg = new Call();
+        msg.parseString(message.toString());
+        if (msg.action && Object.values(ClientCommand).includes(msg.action)) {
+          this.emit(msg.action, {ws, params, msg});
+        }
+      });
     });
   }
 
