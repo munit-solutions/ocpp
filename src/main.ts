@@ -56,6 +56,26 @@ import SetChargingProfile from './builder/req/SetChargingProfile';
 import SetChargingProfileResult from './builder/conf/SetChargingProfile';
 import StartTransaction from './builder/req/StartTransaction';
 import StartTransactionResult from './builder/conf/StartTransactions';
+import StatusNotification from './builder/req/StatusNotification';
+import StatusNotificationResult from './builder/conf/StatusNotification';
+import StopTransaction from './builder/req/StopTransaction';
+import StopTransactionResult from './builder/conf/StopTransaction';
+import TriggerMessage from './builder/req/TriggerMessage';
+import TriggerMessageResult from './builder/conf/TriggerMessage';
+import UnlockConnectorResult from './builder/conf/UnlockConnector';
+import UpdateFirmware from './builder/req/UpdateFirmware';
+import UpdateFirmwareResult from './builder/conf/UpdateFirmware';
+import AuthorizationStatus from './enum/AuthorizationStatus';
+import ChargePointStatus from './enum/ChargePointStatus';
+import ChargingProfileKindType from './enum/ChargingProfileKindType';
+import ChargingProfileStatus from './enum/ChargingProfileStatus';
+import Location from './enum/Location';
+import Measurend from './enum/Measurand';
+import MessageTrigger from './enum/MessageTrigger';
+import Phase from './enum/Phase';
+import ReadingContext from './enum/ReadingContext';
+import Reason from './enum/Reason';
+import RecurrencyKindType from './enum/RecurrencyKindType';
 
 export {
   OCPPServer,
@@ -102,20 +122,40 @@ export {
   SetChargingProfileResult,
   StartTransaction,
   StartTransactionResult,
+  StatusNotification,
+  StatusNotificationResult,
+  StopTransaction,
+  StopTransactionResult,
+  TriggerMessage,
+  TriggerMessageResult,
+  UnlockConnectorResult,
+  UpdateFirmware,
+  UpdateFirmwareResult,
   // enum
-  ClientCommand,
+  AuthorizationStatus,
   AvailabilityStatus,
   AvailabilityType,
   CancelReservationStatus,
+  ChargePointStatus,
+  ChargingProfileKindType,
   ChargingProfilePurposeType,
+  ChargingProfileStatus,
   ChargingRateUnitType,
   ClearCacheStatus,
   ClearChargingProfileStatus,
+  ClientCommand,
   ConfigurationStatus,
   DataTransferStatus,
   DiagnosticsStatus,
   ErrorCode,
   FirmwareStatus,
   GetCompositeScheduleStatus,
+  Location,
+  Measurend,
+  MessageTrigger,
+  Phase,
+  ReadingContext,
+  Reason,
+  RecurrencyKindType,
   RegistrationStatus
 };
