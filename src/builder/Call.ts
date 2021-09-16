@@ -6,7 +6,6 @@ export default class Call {
   public payload?: any;
 
   constructor() {
-    // TODO: uuid
     this.uniqueId = '';
   }
 

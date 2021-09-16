@@ -8,6 +8,7 @@ export default class CallError extends Error {
     public errorCode: ErrorCode,
     public errorDescription: { [key: string]: any },
   ) {
-    super(`${errorCode} : ${JSON.stringify(errorDescription)}`);
+    super(JSON.stringify(errorDescription));
+    this.name = "CallError";
   }
 }
