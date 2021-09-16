@@ -28,7 +28,7 @@ export default class OCPPServer extends EventEmitter implements OCPPEvent {
         const msg = new Call();
         msg.parseString(message.toString());
         if (msg.action && Object.values(ClientCommand).includes(msg.action)) {
-          this.emit(msg.action, msg);
+          this.emit(msg.action, ws, msg);
         }
       });
     });
