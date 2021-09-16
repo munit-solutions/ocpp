@@ -46,7 +46,7 @@ export default class OCPPServer extends EventEmitter implements OCPPEvent {
     super();
     this.ws = new Server(options, callback);
     this.ws.on('connection', (ws, req) => {
-      if (!req.url) throw new RequestContextError();
+      if (!req.url || req.url === "/") throw new RequestContextError();
       const id = req.url.substring(1);
       const params: WSParams = {
         id
