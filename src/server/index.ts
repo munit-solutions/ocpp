@@ -5,13 +5,25 @@ import {EventEmitter} from 'events';
 
 
 interface OCPPEvent {
-  on(event: ClientCommand, listener: (this: OCPPServer, ws: WebSocket, params: WSParams, msg: Call) => void): this;
+  on(event: ClientCommand, listener: (this: OCPPServer, {
+    ws,
+    params,
+    msg
+  }: { ws: WebSocket, params: WSParams, msg: Call }) => void): this;
 
-  once(event: ClientCommand, listener: (this: OCPPServer, ws: WebSocket, params: WSParams, msg: Call) => void): this;
+  once(event: ClientCommand, listener: (this: OCPPServer, {
+    ws,
+    params,
+    msg
+  }: { ws: WebSocket, params: WSParams, msg: Call }) => void): this;
 
   off(event: ClientCommand, listener: (this: OCPPServer, ...args: any[]) => void): this;
 
-  addListener(event: ClientCommand, listener: (this: OCPPServer, ws: WebSocket, params: WSParams, msg: Call) => void): this;
+  addListener(event: ClientCommand, listener: (this: OCPPServer, {
+    ws,
+    params,
+    msg
+  }: { ws: WebSocket, params: WSParams, msg: Call }) => void): this;
 
   removeListener(event: ClientCommand, listener: (...args: any[]) => void): this;
 }
@@ -43,7 +55,7 @@ export default class OCPPServer extends EventEmitter implements OCPPEvent {
         const msg = new Call();
         msg.parseString(message.toString());
         if (msg.action && Object.values(ClientCommand).includes(msg.action)) {
-          this.emit(msg.action, ws, params, msg);
+          this.emit(msg.action, {ws, params, msg});
         }
       });
     });
