@@ -32,7 +32,7 @@ export default class OCPPServer extends EventEmitter {
     ws,
     params,
     msg
-  }: { ws?: WebSocket, params?: WSParams, msg?: Call }) => void) {
+  }: { ws: WebSocket, params: WSParams, msg: Call }) => void) {
     return super.on(event, listener);
   }
 
@@ -40,7 +40,7 @@ export default class OCPPServer extends EventEmitter {
     ws,
     params,
     msg
-  }: { ws?: WebSocket, params?: WSParams, msg?: Call }) => void) {
+  }: { ws: WebSocket, params: WSParams, msg: Call }) => void) {
     return super.once(event, listener);
   }
 }
