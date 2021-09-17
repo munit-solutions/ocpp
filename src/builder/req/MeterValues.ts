@@ -3,12 +3,12 @@ import Call from '../Call';
 export type MeterValuesPayload = {
   connectorId: number;
   transactionId?: number;
-  meterValue: MeterValue;
+  meterValue: MeterValue[];
 };
 
 export type MeterValue = {
   timestamp: Date,
-  sampledValue: SampledValue
+  sampledValue?: SampledValue
 }
 
 export type SampledValue = {

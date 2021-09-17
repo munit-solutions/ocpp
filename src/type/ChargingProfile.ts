@@ -9,8 +9,8 @@ export type ChargingProfile = {
   stackLevel: number,
   chargingProfilePurpose: ChargingProfilePurposeType,
   chargingProfileKind: ChargingProfileKindType,
-  recurrencyKindType: RecurrencyKindType,
-  validFrom: Date,
-  validTo: Date,
+  recurrencyKind?: RecurrencyKindType,
+  validFrom?: Date,
+  validTo?: Date,
   chargingSchedule: ChargingSchedule,
 }
