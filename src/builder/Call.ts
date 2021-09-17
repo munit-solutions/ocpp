@@ -5,8 +5,9 @@ export default class Call {
   public action?: ClientCommand;
   public payload?: any;
 
-  constructor() {
-    this.uniqueId = '';
+  constructor(uniqueId: string = '', payload?: { [key: string]: any }) {
+    this.uniqueId = uniqueId;
+    this.payload = payload;
   }
 
   parseString(message: string) {
