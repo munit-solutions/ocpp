@@ -76,6 +76,11 @@ import Phase from './enum/Phase';
 import ReadingContext from './enum/ReadingContext';
 import Reason from './enum/Reason';
 import RecurrencyKindType from './enum/RecurrencyKindType';
+import RemoteStartStopStatus from './enum/RemoteStartStopStatus';
+import ReservationStatus from './enum/ReservationStatus';
+import ResetStatus from './enum/ResetStatus';
+import ResetType from './enum/ResetType';
+import TriggerMessageStatus from './enum/TriggerMessageStatus';
 
 export {
   OCPPServer,
@@ -157,5 +162,10 @@ export {
   ReadingContext,
   Reason,
   RecurrencyKindType,
-  RegistrationStatus
+  RegistrationStatus,
+  RemoteStartStopStatus,
+  ReservationStatus,
+  ResetStatus,
+  ResetType,
+  TriggerMessageStatus
 };
