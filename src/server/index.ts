@@ -1,5 +1,4 @@
 import WebSocket, {Server, ServerOptions} from 'ws';
-import Call from '../builder/Call';
 import ClientCommand from '../enum/ClientCommand';
 import {EventEmitter} from 'events';
 import Message from '../builder/Message';
@@ -32,7 +31,7 @@ export default class OCPPServer extends EventEmitter {
     ws,
     params,
     msg
-  }: { ws: WebSocket, params: WSParams, msg: Call }) => void) {
+  }: { ws: WebSocket, params: WSParams, msg: Message }) => void) {
     return super.on(event, listener);
   }
 
@@ -40,7 +39,7 @@ export default class OCPPServer extends EventEmitter {
     ws,
     params,
     msg
-  }: { ws: WebSocket, params: WSParams, msg: Call }) => void) {
+  }: { ws: WebSocket, params: WSParams, msg: Message }) => void) {
     return super.once(event, listener);
   }
 }
