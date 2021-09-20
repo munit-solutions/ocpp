@@ -28,7 +28,7 @@ export default class OCPPServer extends EventEmitter {
     });
   }
 
-  on(event: ClientCommand | 'context_error', listener: (this: OCPPServer, {
+  on(event: ClientCommand | 'context_error' | string, listener: (this: OCPPServer, {
     ws,
     params,
     msg
@@ -36,7 +36,7 @@ export default class OCPPServer extends EventEmitter {
     return super.on(event, listener);
   }
 
-  once(event: ClientCommand, listener: (this: OCPPServer, {
+  once(event: ClientCommand | 'context_error' | string, listener: (this: OCPPServer, {
     ws,
     params,
     msg
