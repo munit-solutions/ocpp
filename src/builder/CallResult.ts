@@ -1,11 +1,12 @@
-export default class CallResult {
-  constructor(public uniqueId: string, public payload: { [key: string]: any } = {}) {}
+import Message from './Message';
 
-  public toString = (): string => {
-    return JSON.stringify(this.toArray());
-  };
+export default class CallResult extends Message {
+  constructor(public uniqueId: string = '', public payload: { [key: string]: any } = {}) {
+    super(uniqueId, payload);
+    this.messageType = 3;
+  }
 
-  public toArray = (): [number, string, { [key: string]: any }] => {
-    return [3, this.uniqueId, this.payload];
+  public toArray = (): [number, string, any] => {
+    return super.toArray() as [number, string, any];
   };
 }

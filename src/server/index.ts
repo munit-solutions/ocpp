@@ -2,6 +2,7 @@ import WebSocket, {Server, ServerOptions} from 'ws';
 import Call from '../builder/Call';
 import ClientCommand from '../enum/ClientCommand';
 import {EventEmitter} from 'events';
+import Message from '../builder/Message';
 
 export type WSParams = {
   id?: string;
@@ -20,11 +21,9 @@ export default class OCPPServer extends EventEmitter {
         id
       }
       ws.on('message', (message) => {
-        const msg = new Call();
+        const msg = new Message();
         msg.parseString(message.toString());
-        if (msg.action && Object.values(ClientCommand).includes(msg.action)) {
-          this.emit(msg.action, {ws, params, msg});
-        }
+        this.emit(msg.action || msg.uniqueId, {ws, params, msg});
       });
     });
   }
