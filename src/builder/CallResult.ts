@@ -5,8 +5,4 @@ export default class CallResult extends Message {
     super(uniqueId, payload);
     this.messageType = 3;
   }
-
-  public toArray = (): [number, string, any] => {
-    return super.toArray() as [number, string, any];
-  };
 }

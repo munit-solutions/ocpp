@@ -27,7 +27,7 @@ export default class Message {
     return JSON.stringify(this.toArray());
   };
 
-  public toArray = (): [number, string, ClientCommand, any]  | [number, string, any]=> {
+  public toArray = (): any[] => {
     if (this.action !== undefined && !this.payload) throw new Error();
     return this.messageType === 3 ? [this.messageType, this.uniqueId, this.payload] : [this.messageType, this.uniqueId, this.action as ClientCommand, this.payload];
   };
