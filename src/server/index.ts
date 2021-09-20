@@ -5,6 +5,7 @@ import {EventEmitter} from 'events';
 
 export type WSParams = {
   id?: string;
+  connectorId?: number;
 }
 
 export default class OCPPServer extends EventEmitter {
