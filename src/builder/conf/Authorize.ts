@@ -6,8 +6,8 @@ export type AuthorizeResPayload = {
 };
 
 export type IdTagInfo = {
-  expiryDate: Date;
-  parentIdTag: Date;
+  expiryDate?: Date;
+  parentIdTag?: Date;
   status: AuthorizationStatus;
 };
 
