@@ -1,4 +1,5 @@
 import Call from '../Call';
+import {MeterValue} from '../../type/MeterValue';
 
 export type MeterValuesPayload = {
   connectorId: number;
@@ -6,14 +7,6 @@ export type MeterValuesPayload = {
   meterValue: MeterValue[];
 };
 
-export type MeterValue = {
-  timestamp: Date,
-  sampledValue?: SampledValue
-}
-
-export type SampledValue = {
-  // TODO: has to be defined
-}
 
 export default class MeterValues extends Call {
   constructor(public payload?: MeterValuesPayload) {
