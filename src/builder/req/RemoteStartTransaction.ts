@@ -1,5 +1,6 @@
 import Call from '../Call';
 import {ChargingProfile} from "../../type/ChargingProfile"
+import ClientCommand from '../../enum/ClientCommand';
 
 export type RemoteStartTransactionPayload = {
   connectorId: number;
@@ -8,7 +9,8 @@ export type RemoteStartTransactionPayload = {
 };
 
 export default class RemoteStartTransaction extends Call {
-  constructor(public payload?: RemoteStartTransactionPayload) {
+  constructor(public uniqueId: string = '', public payload?: RemoteStartTransactionPayload) {
     super();
+    this.action = ClientCommand.RemoteStartTransaction;
   }
 }

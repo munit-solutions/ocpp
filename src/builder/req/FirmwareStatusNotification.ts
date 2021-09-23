@@ -7,7 +7,7 @@ export type FirmwareStatusNotificationPayload = {
 };
 
 export default class FirmwareStatusNotification extends Call {
-  constructor(public payload?: FirmwareStatusNotificationPayload) {
+  constructor(public uniqueId: string = '', public payload?: FirmwareStatusNotificationPayload) {
     super();
     this.action = ClientCommand.FirmwareStatusNotification;
   }

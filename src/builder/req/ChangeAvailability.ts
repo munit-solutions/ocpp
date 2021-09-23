@@ -7,7 +7,7 @@ export type ChangeAvailabilityPayload = {
   type: AvailabilityType;
 };
 export default class ChangeAvailability extends Call {
-  constructor(public payload?: ChangeAvailabilityPayload) {
+  constructor(public uniqueId: string = '', public payload?: ChangeAvailabilityPayload) {
     super();
     this.action = ClientCommand.ChangeAvailability;
   }

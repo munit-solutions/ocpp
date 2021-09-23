@@ -6,7 +6,7 @@ export type ChangeConfigurationPayload = {
   value: string;
 };
 export default class ChangeConfiguration extends Call {
-  constructor(public payload?: ChangeConfigurationPayload) {
+  constructor(public uniqueId: string = '', public payload?: ChangeConfigurationPayload) {
     super();
     this.action = ClientCommand.ChangeConfiguration;
   }

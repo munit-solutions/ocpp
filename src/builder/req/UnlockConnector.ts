@@ -1,11 +1,14 @@
 import Call from '../Call';
+import ClientCommand from '../../enum/ClientCommand';
 
-export type TriggerMessagePayload = {
-  connectorId: number;
+export type UnlockConnectorPayload = {
+  [key: string]: any;
+  // TODO
 };
 
-export default class TriggerMessage extends Call {
-  constructor(public payload?: TriggerMessagePayload) {
+export default class UnlockConnector extends Call {
+  constructor(public uniqueId: string = '', public payload?: UnlockConnectorPayload) {
     super();
+    this.action = ClientCommand.UnlockConnector
   }
 }

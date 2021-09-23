@@ -5,7 +5,7 @@ export type AuthorizePayload = {
   idTag: string;
 };
 export default class Authorize extends Call {
-  constructor(public payload?: AuthorizePayload) {
+  constructor(public uniqueId: string = '', public payload?: AuthorizePayload) {
     super();
     this.action = ClientCommand.BootNotification;
   }

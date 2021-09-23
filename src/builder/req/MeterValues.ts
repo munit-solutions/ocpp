@@ -1,5 +1,6 @@
 import Call from '../Call';
 import {MeterValue} from '../../type/MeterValue';
+import ClientCommand from '../../enum/ClientCommand';
 
 export type MeterValuesPayload = {
   connectorId: number;
@@ -9,7 +10,8 @@ export type MeterValuesPayload = {
 
 
 export default class MeterValues extends Call {
-  constructor(public payload?: MeterValuesPayload) {
+  constructor(public uniqueId: string = '', public payload?: MeterValuesPayload) {
     super();
+    this.action = ClientCommand.MeterValues;
   }
 }

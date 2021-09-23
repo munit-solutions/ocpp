@@ -1,4 +1,5 @@
 import Call from '../Call';
+import ClientCommand from '../../enum/ClientCommand';
 
 export type GetDiagnosticsPayload = {
   location: string;
@@ -9,7 +10,8 @@ export type GetDiagnosticsPayload = {
 };
 
 export default class GetDiagnostics extends Call {
-  constructor(public payload?: GetDiagnosticsPayload) {
+  constructor(public uniqueId: string = '', public payload?: GetDiagnosticsPayload) {
     super();
+    this.action = ClientCommand.GetDiagnostics;
   }
 }

@@ -7,7 +7,7 @@ export type DiagnosticsStatusNotificationPayload = {
 };
 
 export default class DiagnosticsStatusNotification extends Call {
-  constructor(public payload?: DiagnosticsStatusNotificationPayload) {
+  constructor(public uniqueId: string = '', public payload?: DiagnosticsStatusNotificationPayload) {
     super();
     this.action = ClientCommand.DiagnosticsStatusNotification;
   }

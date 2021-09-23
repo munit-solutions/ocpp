@@ -1,4 +1,5 @@
 import Call from '../Call';
+import ClientCommand from '../../enum/ClientCommand';
 
 export type GetConfigurationPayload = {
   key?: string[];
@@ -13,7 +14,8 @@ export type KeyValue = {
 };
 
 export default class GetConfiguration extends Call {
-  constructor(public uniqueId: string, public payload?: GetConfigurationPayload) {
+  constructor(public uniqueId: string = '', public payload?: GetConfigurationPayload) {
     super();
+    this.action = ClientCommand.GetConfiguration;
   }
 }

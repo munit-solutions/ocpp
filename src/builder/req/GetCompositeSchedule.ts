@@ -9,7 +9,7 @@ export type GetCompositeScheduleResPayload = {
 };
 
 export default class GetCompositeSchedule extends Call {
-  constructor(public payload?: GetCompositeScheduleResPayload) {
+  constructor(public uniqueId: string = '', public payload?: GetCompositeScheduleResPayload) {
     super();
     this.action = ClientCommand.GetCompositeSchedule;
   }

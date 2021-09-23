@@ -5,7 +5,7 @@ export type CancelReservationPayload = {
   reservationId: number;
 };
 export default class CancelReservation extends Call {
-  constructor(public payload?: CancelReservationPayload) {
+  constructor(public uniqueId: string = '', public payload?: CancelReservationPayload) {
     super();
     this.action = ClientCommand.CancelReservation;
   }

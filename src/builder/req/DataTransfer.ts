@@ -8,7 +8,7 @@ export type DataTransferPayload = {
 };
 
 export default class DataTransfer extends Call {
-  constructor(public payload?: DataTransferPayload) {
+  constructor(public uniqueId: string = '', public payload?: DataTransferPayload) {
     super();
     this.action = ClientCommand.DataTransfer;
   }

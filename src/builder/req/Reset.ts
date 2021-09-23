@@ -1,5 +1,6 @@
 import Call from '../Call';
 import ResetType from '../../enum/ResetType';
+import ClientCommand from '../../enum/ClientCommand';
 
 
 export type ResetPayload = {
@@ -7,7 +8,8 @@ export type ResetPayload = {
 };
 
 export default class Reset extends Call {
-  constructor(public payload?: ResetPayload) {
+  constructor(public uniqueId: string = '', public payload?: ResetPayload) {
     super();
+    this.action = ClientCommand.Reset;
   }
 }

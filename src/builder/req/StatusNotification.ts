@@ -1,6 +1,7 @@
 import Call from '../Call';
 import ErrorCode from '../../enum/ErrorCode';
 import ChargePointStatus from '../../enum/ChargePointStatus';
+import ClientCommand from '../../enum/ClientCommand';
 
 export type StatusNotificationPayload = {
   connectorId: number;
@@ -13,7 +14,8 @@ export type StatusNotificationPayload = {
 };
 
 export default class StatusNotification extends Call {
-  constructor(public payload?: StatusNotificationPayload) {
+  constructor(public uniqueId: string = '', public payload?: StatusNotificationPayload) {
     super();
+    this.action = ClientCommand.StatusNotification;
   }
 }

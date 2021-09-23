@@ -13,7 +13,7 @@ export type BootNotificationPayload = {
   meterType?: string;
 };
 export default class BootNotification extends Call {
-  constructor(public payload?: BootNotificationPayload) {
+  constructor(public uniqueId: string = '', public payload?: BootNotificationPayload) {
     super();
     this.action = ClientCommand.BootNotification;
   }

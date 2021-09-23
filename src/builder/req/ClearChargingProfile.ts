@@ -9,7 +9,7 @@ export type ClearChargingProfilePayload = {
   stackLevel?: number;
 };
 export default class ClearChargingProfile extends Call {
-  constructor(public payload?: ClearChargingProfilePayload) {
+  constructor(public uniqueId: string = '', public payload?: ClearChargingProfilePayload) {
     super();
     this.action = ClientCommand.ClearChargingProfile;
   }

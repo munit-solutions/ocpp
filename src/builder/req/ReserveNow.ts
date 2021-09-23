@@ -1,4 +1,5 @@
 import Call from '../Call';
+import ClientCommand from '../../enum/ClientCommand';
 
 export type ReserveNowPayload = {
     connectorId: number;
@@ -9,7 +10,8 @@ export type ReserveNowPayload = {
 };
 
 export default class ReserveNow extends Call {
-  constructor(public payload?: ReserveNowPayload) {
+  constructor(public uniqueId: string = '', public payload?: ReserveNowPayload) {
     super();
+    this.action = ClientCommand.ReserveNow;
   }
 }
