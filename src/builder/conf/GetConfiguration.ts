@@ -8,7 +8,7 @@ export type GetConfigurationResPayload = {
 export type KeyValue = {
   key: string;
   readonly: boolean;
-  value: string;
+  value?: string;
 };
 
 export default class GetConfigurationResult extends CallResult {
