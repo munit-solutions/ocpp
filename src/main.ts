@@ -81,6 +81,8 @@ import ReservationStatus from './enum/ReservationStatus';
 import ResetStatus from './enum/ResetStatus';
 import ResetType from './enum/ResetType';
 import TriggerMessageStatus from './enum/TriggerMessageStatus';
+import GetConfigurationResult from './builder/conf/GetConfiguration';
+import GetConfiguration from './builder/req/GetConfiguration';
 
 export {
   OCPPServer,
@@ -109,6 +111,8 @@ export {
   GetCompositeScheduleResult,
   GetDiagnostics,
   GetDiagnosticsResult,
+  GetConfiguration,
+  GetConfigurationResult,
   Heartbeat,
   HeartbeatResult,
   MeterValues,
