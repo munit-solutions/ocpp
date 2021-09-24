@@ -1,6 +1,6 @@
 {
   "name": "@munit-solutions/ocpp",
-  "version": "2.19.0",
+  "version": "2.20.0",
   "description": "",
   "main": "dist/tsc/main.js",
   "types": "dist/tsc/main.d.ts",
