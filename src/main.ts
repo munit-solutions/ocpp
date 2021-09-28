@@ -1,4 +1,5 @@
 import OCPPServer from './server';
+import OCPPClient from './client';
 import Authorize from './builder/req/Authorize';
 import AuthorizeResult from './builder/conf/Authorize';
 import BootNotification from './builder/req/BootNotification';
@@ -86,6 +87,7 @@ import GetConfiguration from './builder/req/GetConfiguration';
 
 export {
   OCPPServer,
+  OCPPClient,
   // command list
   Authorize,
   AuthorizeResult,
