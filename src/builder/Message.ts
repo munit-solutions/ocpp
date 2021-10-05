@@ -28,7 +28,6 @@ export default class Message {
   };
 
   public toArray = (): any[] => {
-    if (this.action !== undefined && !this.payload) throw new Error();
-    return this.messageType === 3 ? [this.messageType, this.uniqueId, this.payload] : [this.messageType, this.uniqueId, this.action as ClientCommand, this.payload];
+    return this.messageType === 3 ? [this.messageType, this.uniqueId, this.payload ?? {}] : [this.messageType, this.uniqueId, this.action as ClientCommand, this.payload ?? {}];
   };
 }
