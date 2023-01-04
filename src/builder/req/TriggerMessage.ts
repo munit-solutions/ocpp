@@ -4,7 +4,7 @@ import ClientCommand from '../../enum/ClientCommand';
 
 export type TriggerMessagePayload = {
   requestedMessage: MessageTrigger;
-  connecterId?: number;
+  connectorId?: number;
 };
 
 export default class TriggerMessage extends Call {
