@@ -7,6 +7,6 @@ export type AuthorizePayload = {
 export default class Authorize extends Call {
   constructor(public uniqueId: string = '', public payload?: AuthorizePayload) {
     super();
-    this.action = ClientCommand.BootNotification;
+    this.action = ClientCommand.Authorize;
   }
 }
